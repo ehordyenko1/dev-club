@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class List {
 	private int array[];
 	private int capacity;
@@ -57,8 +59,8 @@ public class List {
    		int newCurrent = current + 1;
 
    		if ( newCurrent > capacity ) {
-       		int newCapacity = (int)capacity*(double)multiplier;
-       		int newArray = new(array, newCapacity*4);
+       		int newCapacity = capacity*(int)multiplier;
+       		int []newArray = new int[newCapacity*4];
 
        	if ( newArray == null ) {
            throw new OutOfMemoryException();
@@ -121,14 +123,13 @@ public class List {
 	    }
 	}
 
-	public String toString(List list[]) {
-		int last = list.size() - 1;
-
-   		for ( int i = 0; i < last; i++ ) {
-	       	return System.out.println(list[i]);
-	   }
-	   return System.out.println(list[last]);
+	public String printArr() {
+		System.out.println(Arrays.toString(array));
 	}
+
+	// public String toString(List list) {
+	// 	return (java.util.Arrays.toString (array));
+	// }
 }
  
 

@@ -3,7 +3,7 @@ public class Strings {
         StringBuffer out = new StringBuffer();
 
         for ( int i = 0; i < 10; i++ ) {
-            out.append("some text...");
+            out.append(args[i]);
         }
 
         System.out.println(out);

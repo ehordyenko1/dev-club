@@ -12,8 +12,6 @@ public class Complex {
 		this.imaginary = 0;
 	}
 
-	public ~Complex() {}
-
 	public double getReal() {
 		return this.real;
 	}
