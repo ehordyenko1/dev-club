@@ -11,7 +11,7 @@ Unit::Unit(const std::string& name, int hp, int dmg) {
     this->hitPointsLimit = hp;
     this->damage = dmg;
     this->hitPoints = hp;
-    this->ensureIsAlive();
+    // this->ensureIsAlive();
 }
 
 Unit::~Unit() {}
@@ -64,7 +64,6 @@ Unit::~Unit() {}
         int dmg = damage / 2;
 
         enemy.hitPoints -= dmg;
-        std::cout << "fsaf" << std::endl; 
     }
 
     std::ostream& operator<<(std::ostream& out, const Unit& unit) {
