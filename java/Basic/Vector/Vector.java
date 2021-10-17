@@ -59,7 +59,7 @@ public class Vector {
         return result;
     }
 
-    public Vector substraction( Vector other) {
+    public Vector substraction(Vector other) {
         Vector result = this;
     
         result.x -= other.x;
