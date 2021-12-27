@@ -1,26 +1,26 @@
 #include "AllFiles.hpp"
 
 int main() {
-    Vampire vampire(70, 95);
-    WereWolf werewolf(50, 100);
-    Soldier soldier(85, 100);
-    Rogue rogue(90, 105);
-    Wizard wizard(50, 100);
-    Healer healer(50, 160);
-    Berserker berserker(80, 120);
-    Priest priest(70, 120);
-    Necromancer necromancer(60, 120);
-    Warlock warlock(60, 160);
+    Vampire* vampire = new Vampire(70, 95);
+    WereWolf* werewolf = new WereWolf(50, 100);
+    Soldier* soldier = new Soldier(85, 100);
+    Rogue* rogue = new Rogue(90, 105);
+    Wizard* wizard = new Wizard(50, 100);
+    Healer* healer = new Healer(50, 160);
+    Berserker* berserker = new Berserker(80, 120);
+    Priest* priest = new Priest(70, 120);
+    Necromancer* necromancer = new Necromancer(60, 120);
+    Warlock* warlock = new Warlock(60, 160);
 
-    // necromancer.attack(&berserker);
-    // necromancer.attack(&berserker);
-    // priest.attack(&berserker);
-    // priest.attack(&berserker);
-    // soldier.attack(&berserker);
-    // necromancer.checkAttacked();
-    // warlock.summon();
-    // warlock.attack(&berserker);
-    // priest.arcaneBolt(necromancer);
+    // necromancer->attack(healer);
+    // necromancer->attack(wizard);
+    // priest->attack(necromancer);
+    // priest->attack(berserker);
+    // soldier->attack(warlock);
+    // necromancer->checkAttacked();
+    // warlock->summon();
+    // warlock->attack(berserker);
+    // priest->arcaneBolt(rogue);
 
     std::cout << std::endl;
 
