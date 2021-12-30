@@ -38,14 +38,12 @@ class Car {
     }
 
     public function drive($destination) {
-        if ( $this->location == null) {
-            throw new ZeroLocation();
-        }
-        $distance = new Point();
-        $fuelNeeded = $this->location->distance($destination) * $this->fuelConsumption;
-        echo $fuelNeeded;
+        // if (!($this->location instanceof Point)) {
+        //     throw new Exception("Zero Location");
+        // }
+        $fuelNeeded = $location->distance($destination) * $this->fuelConsumption;
             if ( $this->fuelAmount < $fuelNeeded ) {
-                throw new OutOfFuel();
+                throw new Exception("Out of fuel");
             }
 
             $this->fuelAmount -= $fuelNeeded;
@@ -59,7 +57,7 @@ class Car {
 
     public function refill($fuel) {
         if ($fuel > $this->fuelCapacity) {
-            throw new ToMuchFuel();
+            throw new Exception("To much Fuel");
         }
         $this->fuelAmount += $fuel;
     }
@@ -69,7 +67,7 @@ class Car {
     }
 }
 
-$car = new Car(60, 0.5, 3,3, "Walen");
+$car = new Car(60, 0.5, 3.3, "Walen");
 
 $x = 50;
 $y = 70;
